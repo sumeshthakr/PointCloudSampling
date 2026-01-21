@@ -1,0 +1,11 @@
+.venv/
+.venv311/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+*.egg
+.idea/
+.vscode/
+.DS_Store
