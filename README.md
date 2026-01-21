@@ -28,3 +28,19 @@ pytest
 ## Notes
 - For visualization install the `vis` extra (adds `open3d`)
 - This project is packaged via `pyproject.toml` for pip/setuptools.
+
+---
+
+## Publishing to PyPI (automated)
+This repo includes a GitHub Actions workflow that will build and publish the package to PyPI when a tag matching `v*.*.*` is pushed.
+
+1. Create a PyPI API token (on https://pypi.org/manage/account/token/).
+2. Add the token as a GitHub repo secret named `PYPI_API_TOKEN` in the repository settings.
+3. Create a tag and push it to GitHub, for example:
+
+   git tag -a v0.1.0 -m "Release v0.1.0"
+   git push origin v0.1.0
+
+The workflow will run and publish the package automatically.
+
+If you prefer, I can publish now for you — I'll need a PyPI API token (or you can set it in GitHub secrets and I'll create the tag).
