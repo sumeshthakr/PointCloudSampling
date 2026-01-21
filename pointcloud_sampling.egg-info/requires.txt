@@ -1,0 +1,7 @@
+numpy
+
+[test]
+pytest
+
+[vis]
+open3d

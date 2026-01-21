@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pointcloud-sampling"
+version = "0.1.0"
+description = "Poisson disk and uniform sampling for 3D point clouds"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+vis = ["open3d"]
+test = ["pytest"]
+
+[project.urls]
+Homepage = "https://github.com/sumeshthakr/PointCloudSampling"
