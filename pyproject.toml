@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "point-cloud-sampling"
+version = "0.2.0"
+description = "Fast 3D Point Cloud Sampling (Poisson Disk, Uniform) using Numba."
+readme = "README.md"
+authors = [
+    { name = "Sumesh Thakr", email = "sumeshthakur23@gmail.com" }
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dependencies = [
+    "numpy",
+    "matplotlib",
+    "numba>=0.50.0",
+]
+requires-python = ">=3.8"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+    "mypy",
+    "build",
+    "twine"
+]
+
+[project.urls]
+Homepage = "https://github.com/sumeshthakr/PointCloudSampling"
+BugTracker = "https://github.com/sumeshthakr/PointCloudSampling/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
